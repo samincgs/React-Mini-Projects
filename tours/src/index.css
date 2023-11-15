@@ -126,6 +126,19 @@ main {
   border: none;
 }
 
+.toggle-btn {
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  text-transform: capitalize;
+  padding: 0 0.5rem;
+  color: rgb(22, 185, 112);
+}
+
+.toggle-btn:hover {
+  color: #5ce1a5;
+}
+
 @media screen and (min-width: 768px) {
   .tours {
     grid-template-columns: 1fr 1fr;
