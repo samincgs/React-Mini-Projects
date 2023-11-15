@@ -29,6 +29,18 @@ function App() {
     }
   };
 
+  const randomPerson = () => {
+    let randomIndex = Math.floor(Math.random() * 4);
+    if (index === randomIndex) {
+      if (randomIndex >= reviews.length - 1) {
+        randomIndex = 0;
+      } else {
+        randomIndex = index + 1;
+      }
+    }
+    setIndex(randomIndex);
+  };
+
   return (
     <main>
       <div className='container'>
@@ -51,7 +63,7 @@ function App() {
             <FaChevronRight onClick={nextPerson} />
           </button>
         </div>
-        <button type='button' className='btn'>
+        <button type='button' className='btn' onClick={randomPerson}>
           suprise me
         </button>
       </div>
