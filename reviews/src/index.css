@@ -112,8 +112,21 @@ main {
 
 .prev-button:hover,
 .next-button:hover {
-  color: #837dff;
+  color: #a09ceb;
 }
 
 .btn {
+  cursor: pointer;
+  background-color: #837dff;
+  color: #fff;
+  border: transparent;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in all;
+}
+
+.btn:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
