@@ -139,6 +139,25 @@ main {
   color: #5ce1a5;
 }
 
+.refresh-btn {
+  cursor: pointer;
+  color: #fff;
+  background-color: #49da99;
+  border: transparent;
+  border-radius: 0.25rem;
+  letter-spacing: 1px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.4rem 0.8rem;
+  transition: 0.3s ease-in all;
+  text-transform: capitalize;
+  margin-top: 1rem;
+}
+
+.refresh-btn:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #23eb91;
+}
+
 @media screen and (min-width: 768px) {
   .tours {
     grid-template-columns: 1fr 1fr;
