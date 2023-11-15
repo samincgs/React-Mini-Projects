@@ -21,6 +21,12 @@ function App() {
     setIsLoading(false);
   };
 
+  const removeTour = (id) => {
+    const newTours = tours.filter((tour) => tour.id !== id);
+
+    setTours(newTours);
+  };
+
   useEffect(() => {
     fetchTours();
   }, []);
@@ -35,7 +41,7 @@ function App() {
 
   return (
     <main>
-      <Tours tours={tours} />
+      <Tours tours={tours} removeTour={removeTour} />
     </main>
   );
 }

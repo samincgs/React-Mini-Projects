@@ -1,6 +1,6 @@
 import Tour from './Tour.jsx';
 
-const Tours = ({ tours }) => {
+const Tours = ({ tours, removeTour }) => {
   return (
     <div>
       <div className='tour-title'>
@@ -10,7 +10,7 @@ const Tours = ({ tours }) => {
       <div className='tours'>
         {tours.map((tour) => {
           console.log(tour);
-          return <Tour key={tour.id} {...tour} />;
+          return <Tour key={tour.id} {...tour} removeTour={removeTour} />;
         })}
       </div>
     </div>
