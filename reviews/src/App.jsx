@@ -11,9 +11,23 @@ import { reviews } from './data.js';
 function App() {
   const [index, setIndex] = useState(0);
 
-  const { id, name, image, title, desc } = reviews[index];
+  const { name, image, title, desc } = reviews[index];
 
-  console.log(name);
+  const nextPerson = () => {
+    if (index >= reviews.length - 1) {
+      setIndex(0);
+    } else {
+      setIndex(index + 1);
+    }
+  };
+
+  const prevPerson = () => {
+    if (index <= 0) {
+      setIndex(reviews.length - 1);
+    } else {
+      setIndex(index - 1);
+    }
+  };
 
   return (
     <main>
@@ -30,11 +44,11 @@ function App() {
           <p className='desc'>{desc}</p>
         </div>
         <div className='button-container'>
-          <button type='button' className='prev-button'>
+          <button type='button' className='prev-button' onClick={prevPerson}>
             <FaChevronLeft />
           </button>
           <button type='button' className='next-button'>
-            <FaChevronRight />
+            <FaChevronRight onClick={nextPerson} />
           </button>
         </div>
         <button type='button' className='btn'>
