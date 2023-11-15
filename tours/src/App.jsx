@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import Loading from './components/Loading.jsx';
 import Tours from './components/Tours.jsx';
 
@@ -23,7 +24,6 @@ function App() {
 
   const removeTour = (id) => {
     const newTours = tours.filter((tour) => tour.id !== id);
-
     setTours(newTours);
   };
 
