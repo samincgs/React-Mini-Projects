@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { data } from './data.js';
+
 import Questions from './components/Questions.jsx';
 
 function App() {
