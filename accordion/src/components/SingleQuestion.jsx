@@ -7,7 +7,7 @@ const SingleQuestion = ({ id, title, desc, activeId, toggleActiveId }) => {
   return (
     <div className='question'>
       <div className='title-content'>
-        <h4>{title}</h4>
+        <h5>{title}</h5>
         <button
           type='button'
           onClick={() => toggleActiveId(id)}
@@ -16,7 +16,7 @@ const SingleQuestion = ({ id, title, desc, activeId, toggleActiveId }) => {
           {currentId ? <AiOutlineMinus /> : <AiOutlinePlus />}
         </button>
       </div>
-      <p className='info'>{currentId && desc}</p>
+      {currentId && <p className='info'>{desc}</p>}
     </div>
   );
 };

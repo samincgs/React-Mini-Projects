@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #cffafe;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 90vw;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out all;
+}
+
+.container:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.question {
+  border: 1px solid #cbd5e1;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.title-content h5 {
+  color: #334155;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.btn {
+  cursor: pointer;
+  border: transparent;
+  background-color: #4172b6;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-out all;
+}
+
+.btn:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info {
+  letter-spacing: 1px;
+  line-height: 2;
+  margin-top: 1rem;
+  color: #94a3b8;
+}

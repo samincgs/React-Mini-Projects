@@ -3,7 +3,7 @@ import SingleQuestion from './SingleQuestion.jsx';
 const Questions = ({ questions, activeId, toggleActiveId }) => {
   return (
     <div className='container'>
-      <h2>Questions</h2>
+      <h1>Questions</h1>
       {questions.map((question) => {
         return (
           <SingleQuestion
