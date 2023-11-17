@@ -1,12 +1,12 @@
 const Categories = ({ categories, findMenu }) => {
   return (
     <div className='btn-container'>
-      {categories.map((category, index) => {
+      {categories.map((category) => {
         return (
           <button
             type='button'
             className='btn'
-            key={index}
+            key={category}
             onClick={() => findMenu(category)}
           >
             {category}

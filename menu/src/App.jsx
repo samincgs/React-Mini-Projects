@@ -13,7 +13,7 @@ function App() {
 
   const findMenu = (category) => {
     if (category === 'All') {
-      setMenuItems(menu);
+      setMenuItems(data);
       return;
     }
     const categoryMenu = data.filter((menu) => menu.category === category);
