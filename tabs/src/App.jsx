@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import Loading from './components/Loading.jsx';
+import Jobs from './components/Jobs.jsx';
 
 const url = 'https://course-api.com/react-tabs-project';
 function App() {
@@ -29,7 +30,9 @@ function App() {
 
   return (
     <main>
-      <div className='jobs-container'>hello react</div>
+      <div className='container'>
+        <Jobs jobs={jobs} />
+      </div>
     </main>
   );
 }
