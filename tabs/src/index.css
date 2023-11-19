@@ -31,3 +31,54 @@ body {
 main {
   min-height: 100vh;
 }
+
+.container {
+  width: 75vw;
+  max-width: 1120px;
+  margin: 5rem auto;
+}
+
+.job-info {
+  letter-spacing: 1px;
+}
+
+.job-info h2 {
+  color: #334155;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.job-company {
+  border: transparent;
+  background-color: #cbd5e1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+
+.job-info h4 {
+  color: #64748b;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.job-desc {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.job-icon {
+  color: #49da99;
+}
+
+.job-duty {
+  line-height: 1.5;
+  color: #000;
+  font-weight: 300;
+}
