@@ -30,6 +30,7 @@ body {
 
 main {
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .container {
@@ -87,16 +88,16 @@ main {
   display: flex;
   justify-content: center;
   gap: 0.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .btn {
   cursor: pointer;
   border: transparent;
   background-color: transparent;
+  padding: 0.25rem;
   letter-spacing: 1px;
   transition: 0.2s linear all;
-  font-size: 0.9rem;
 }
 
 .btn:hover {
@@ -105,5 +106,22 @@ main {
 
 .active-btn {
   color: #49da99;
-  box-shadow: 0 3px #49da99;
+  box-shadow: 0 2px #49da99;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+  }
+  .btn-container {
+    flex-direction: column;
+    justify-content: start;
+    gap: 1.5rem;
+    margin-right: 5rem;
+  }
+  .active-btn {
+    box-shadow: -2px 0 #49da99;
+  }
 }
