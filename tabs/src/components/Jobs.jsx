@@ -1,7 +1,7 @@
 import Duties from './Duties.jsx';
 
-const Jobs = ({ jobs }) => {
-  const { title, company, dates, duties } = jobs[0];
+const Jobs = ({ jobs, currentCompany }) => {
+  const { title, company, dates, duties } = jobs[currentCompany];
 
   return (
     <div className='job-info'>
