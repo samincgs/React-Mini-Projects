@@ -9,7 +9,7 @@ export const shortList = [
     image: lelia,
     name: 'Lelia Burton',
     job: 'Graphic Designer',
-    desc: 'leaving single spirit officer noon simplest caught explanation percent brass addition connected pretty pay substance kind over angle object we factory labor no cream',
+    desc: 'leaving single spirit officer noon simplest caught explanation percent brass addition connected pretty pay substance kind over angle',
   },
 ];
 
@@ -19,7 +19,7 @@ export const list = [
     image: lelia,
     name: 'Lelia Burton',
     job: 'Graphic Designer',
-    desc: 'Leaving single spirit officer noon simplest caught explanation percent brass addition connected pretty pay substance kind over angle object we factory labor no cream',
+    desc: 'Leaving single spirit officer noon simplest caught explanation percent brass addition connected pretty pay substance kind over angle',
   },
   {
     id: 2,
