@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { FaQuoteRight, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 const Carousel = ({ people, currentPerson, setCurrentPerson }) => {
@@ -16,6 +17,16 @@ const Carousel = ({ people, currentPerson, setCurrentPerson }) => {
       setCurrentPerson(currentPerson + 1);
     }
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      nextButton();
+    }, 3000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [currentPerson]);
 
   return (
     <div className='slider-container'>
