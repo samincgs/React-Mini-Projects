@@ -1,9 +1,21 @@
 import { FaQuoteRight, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 const Carousel = ({ people, currentPerson, setCurrentPerson }) => {
-  const prevButton = () => {};
+  const prevButton = () => {
+    if (currentPerson <= 0) {
+      setCurrentPerson(people.length - 1);
+    } else {
+      setCurrentPerson(currentPerson - 1);
+    }
+  };
 
-  const nextButton = () => {};
+  const nextButton = () => {
+    if (currentPerson >= people.length - 1) {
+      setCurrentPerson(0);
+    } else {
+      setCurrentPerson(currentPerson + 1);
+    }
+  };
 
   return (
     <div className='slider-container'>

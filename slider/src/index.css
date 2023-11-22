@@ -21,7 +21,6 @@ main {
   max-width: 600px;
   margin: 0 auto;
   margin-top: 10rem;
-  transition: 0.3s linear all;
   text-align: center;
   position: relative;
   display: flex;
@@ -32,6 +31,7 @@ main {
 
 .slide {
   position: absolute;
+  transition: 0.3s ease-in-out all;
 }
 
 .slider-img {
@@ -59,7 +59,8 @@ main {
 }
 
 .desc {
-  max-width: 40rem;
+  max-width: 35rem;
+  padding: 0 2rem;
   margin: 0 auto;
   color: #64748b;
   line-height: 2;
