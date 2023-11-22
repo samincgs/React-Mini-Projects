@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { FaQuoteRight, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 const Carousel = ({ people, currentPerson, setCurrentPerson }) => {
-  const prevButton = () => {
+  const prevSlide = () => {
     if (currentPerson <= 0) {
       setCurrentPerson(people.length - 1);
     } else {
@@ -10,7 +10,7 @@ const Carousel = ({ people, currentPerson, setCurrentPerson }) => {
     }
   };
 
-  const nextButton = () => {
+  const nextSlide = () => {
     if (currentPerson >= people.length - 1) {
       setCurrentPerson(0);
     } else {
@@ -20,7 +20,7 @@ const Carousel = ({ people, currentPerson, setCurrentPerson }) => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      nextButton();
+      nextSlide();
     }, 3000);
 
     return () => {
@@ -48,10 +48,10 @@ const Carousel = ({ people, currentPerson, setCurrentPerson }) => {
         );
       })}
       <div className='btn-container'>
-        <button type='button' className='prev' onClick={prevButton}>
+        <button type='button' className='prev' onClick={prevSlide}>
           <FaChevronLeft />
         </button>
-        <button type='button' className='next' onClick={nextButton}>
+        <button type='button' className='next' onClick={nextSlide}>
           <FaChevronRight />
         </button>
       </div>
