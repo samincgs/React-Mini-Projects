@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { nanoid } from 'nanoid';
+
 import data from './data.js';
 
 function App() {
@@ -19,8 +21,8 @@ function App() {
   return (
     <main>
       <div className='lorem-center'>
+        <h4 className='form-heading'>tired of boring lorem ipsum?</h4>
         <form action='' className='form-lorem' onSubmit={handleSubmit}>
-          <h4 className='form-heading'>tired of boring lorem ipsum?</h4>
           <label htmlFor='count' className='form-label'>
             paragraphs:
           </label>
@@ -39,8 +41,10 @@ function App() {
             generate
           </button>
         </form>
-        {text.map((item, index) => (
-          <p key={index}>{item}</p>
+        {text.map((item) => (
+          <p key={nanoid()} className='text'>
+            {item}
+          </p>
         ))}
       </div>
     </main>
