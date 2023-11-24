@@ -9,13 +9,18 @@ function App() {
     setCount(e.target.value);
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const paragraphs = data.slice(0, count);
+    setText(paragraphs);
+  };
 
   return (
     <main>
       <div className='lorem-center'>
-        <h4>tired of using the same boring lorem ipsum?</h4>
         <form action='' className='form-lorem' onSubmit={handleSubmit}>
+          <h4 className='form-heading'>tired of boring lorem ipsum?</h4>
           <label htmlFor='count' className='form-label'>
             paragraphs:
           </label>
@@ -30,8 +35,13 @@ function App() {
             value={count}
             onChange={handleChange}
           />
-          <button type='submit'>generate</button>
+          <button type='submit' className='btn'>
+            generate
+          </button>
         </form>
+        {text.map((item, index) => (
+          <p key={index}>{item}</p>
+        ))}
       </div>
     </main>
   );
