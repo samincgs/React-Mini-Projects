@@ -13,7 +13,6 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const paragraphs = data.slice(0, count);
     setText(paragraphs);
   };
