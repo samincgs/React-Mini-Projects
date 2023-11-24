@@ -1,0 +1,12 @@
+const loremIpsumText = [
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus purus libero, non scelerisque nisl fermentum sit amet. Sed a odio consequat, dapibus ligula eget, hendrerit nunc. Phasellus fringilla ultrices nisl, nec sodales tortor tristique eu. Quisque vitae ante eu justo pharetra fringilla id vel nisl.',
+  'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Integer sagittis sem vel odio ultricies ultrices. Nullam efficitur massa nec bibendum vehicula. Praesent et commodo ex, a pellentesque nulla. Aliquam erat volutpat.',
+  'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. In hac habitasse platea dictumst. Vivamus ut dui a felis bibendum vestibulum. Nulla facilisi. Integer tristique quam a dolor interdum, ac tempus nisl tristique. Nulla facilisi.',
+  'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nullam rhoncus elit in elit facilisis, at malesuada lectus aliquam. Aenean eu erat quis felis ultrices laoreet. Vivamus non arcu varius, egestas risus in, bibendum tortor.',
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed euismod, nunc a efficitur mattis, elit ex ultricies neque, a scelerisque risus felis eu dolor. Etiam eu varius elit, vel aliquam est. Suspendisse potenti. Quisque nec mi vitae est pharetra suscipit.',
+  'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Praesent auctor nulla vel dolor luctus, vel fermentum odio tincidunt. Morbi ut justo eu orci gravida elementum. Vestibulum ullamcorper nisl et laoreet bibendum. Sed fringilla vel elit vel sodales.',
+  'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Sed et elit vel elit consequat bibendum. Suspendisse potenti. Nam auctor nisl euismod, tincidunt augue id, tristique est. Aliquam erat volutpat. Donec fringilla eu elit at finibus. Sed vitae justo eu tortor euismod volutpat.',
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Sed fringilla, arcu in bibendum posuere, augue elit efficitur erat, at eleifend odio urna at elit. Vivamus fermentum risus non eros accumsan, sit amet eleifend dolor cursus. Nulla facilisi.',
+];
+
+export default loremIpsumText;
