@@ -1,11 +1,16 @@
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
-const ColorForm = () => {
+const ColorForm = ({ selectColor }) => {
   const [color, setColor] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(color);
+    try {
+      selectColor(color);
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
 
   return (
