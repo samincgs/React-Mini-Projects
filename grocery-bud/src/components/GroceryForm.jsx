@@ -1,11 +1,18 @@
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
-const GroceryForm = () => {
+const GroceryForm = ({ addItem }) => {
   const [item, setItem] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(item);
+    if (item) {
+      addItem(item);
+      setItem('');
+      toast.success('Item has been added');
+    } else {
+      toast.error('Please provide an item to add');
+    }
   };
 
   return (
