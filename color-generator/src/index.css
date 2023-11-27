@@ -72,3 +72,9 @@ input[type='text'] {
     height: 40px;
   }
 }
+
+.list-container {
+  min-height: calc(100vh - 160px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
