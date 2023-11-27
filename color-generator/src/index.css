@@ -78,3 +78,13 @@ input[type='text'] {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
+
+.color {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.color-light {
+  color: #fff;
+}

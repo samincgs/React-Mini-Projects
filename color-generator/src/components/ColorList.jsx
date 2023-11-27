@@ -4,9 +4,9 @@ import { nanoid } from 'nanoid';
 const ColorList = ({ colors }) => {
   return (
     <div className='list-container'>
-      {colors.map((color) => {
+      {colors.map((color, index) => {
         // console.log(color);
-        return <SingleColor key={nanoid()} color={color} />;
+        return <SingleColor key={nanoid()} color={color} index={index} />;
       })}
     </div>
   );
