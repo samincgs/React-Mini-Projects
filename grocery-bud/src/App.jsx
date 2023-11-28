@@ -1,15 +1,12 @@
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 
 import GroceryForm from './components/GroceryForm.jsx';
+import DisplayItem from './components/DisplayItem.jsx';
 
 function App() {
   const [items, setItems] = useState([]);
-  const tv = [
-    { name: 'tom', id: 1 },
-    { name: 'jerry', id: 2 },
-  ];
 
   const addItem = (item) => {
     const finalItem = {
@@ -17,7 +14,13 @@ function App() {
       completed: false,
       id: nanoid(),
     };
+
     setItems([...items, finalItem]);
+  };
+
+  const deleteItem = (id) => {
+    const finalItem = items.filter((item) => item.id !== id);
+    setItems(finalItem);
   };
 
   return (
@@ -25,6 +28,7 @@ function App() {
       <div className='container-center'>
         <ToastContainer position='top-center' pauseOnHover={false} />
         <GroceryForm addItem={addItem} />
+        <DisplayItem items={items} deleteItem={deleteItem} />
       </div>
     </main>
   );

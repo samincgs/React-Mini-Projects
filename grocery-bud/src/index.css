@@ -64,4 +64,29 @@ main {
   border-bottom-right-radius: 0.25rem;
   letter-spacing: 1px;
   text-transform: capitalize;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease-in all;
+}
+
+.btn:hover {
+  background-color: #51cce1;
+}
+
+.items {
+  margin-top: 1rem;
+}
+
+.single-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.remove-btn {
+  border-radius: 0.25rem;
+  padding: 0.3rem;
+  background-color: #334155;
 }
