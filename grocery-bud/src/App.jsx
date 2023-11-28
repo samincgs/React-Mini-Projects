@@ -5,15 +5,15 @@ import { nanoid } from 'nanoid';
 import GroceryForm from './components/GroceryForm.jsx';
 import DisplayItem from './components/DisplayItem.jsx';
 
-const saveLocalStorage = (items) => {
-  localStorage.setItem('list', JSON.stringify(items));
+const saveToLocalStorage = (items) => {
+  localStorage.setItem('grocery', JSON.stringify(items));
 };
 
 function App() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const storedItems = JSON.parse(localStorage.getItem('list'));
+    const storedItems = JSON.parse(localStorage.getItem('grocery'));
     if (storedItems) {
       setItems(storedItems);
     }
@@ -27,14 +27,22 @@ function App() {
     };
 
     setItems([...items, finalItem]);
-    saveLocalStorage([...items, finalItem]);
+    saveToLocalStorage([...items, finalItem]);
   };
 
   const deleteItem = (id) => {
     const finalItem = items.filter((item) => item.id !== id);
     setItems(finalItem);
-    saveLocalStorage(finalItem);
+    saveToLocalStorage(finalItem);
     toast.success('Item has now been deleted');
+  };
+
+  const crossItem = (id) => {
+    const finalItem = items.map((item) =>
+      item.id === id ? { ...item, completed: !item.completed } : item
+    );
+    setItems(finalItem);
+    saveToLocalStorage(finalItem);
   };
 
   return (
@@ -46,7 +54,11 @@ function App() {
           autoClose={2500}
         />
         <GroceryForm addItem={addItem} />
-        <DisplayItem items={items} deleteItem={deleteItem} />
+        <DisplayItem
+          items={items}
+          deleteItem={deleteItem}
+          crossItem={crossItem}
+        />
       </div>
     </main>
   );
