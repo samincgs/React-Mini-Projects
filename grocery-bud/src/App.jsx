@@ -41,6 +41,7 @@ function App() {
     const finalItem = items.map((item) =>
       item.id === id ? { ...item, completed: !item.completed } : item
     );
+
     setItems(finalItem);
     saveToLocalStorage(finalItem);
   };
