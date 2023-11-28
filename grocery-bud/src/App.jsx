@@ -21,12 +21,17 @@ function App() {
   const deleteItem = (id) => {
     const finalItem = items.filter((item) => item.id !== id);
     setItems(finalItem);
+    toast.success('Item has now been deleted');
   };
 
   return (
     <main>
       <div className='container-center'>
-        <ToastContainer position='top-center' pauseOnHover={false} />
+        <ToastContainer
+          position='top-center'
+          pauseOnHover={false}
+          autoClose={2500}
+        />
         <GroceryForm addItem={addItem} />
         <DisplayItem items={items} deleteItem={deleteItem} />
       </div>
