@@ -17,6 +17,7 @@ main {
 .nav-center {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  transition: 0.3s ease-in-out all;
 }
 
 .nav-header {
@@ -47,10 +48,17 @@ main {
 }
 
 .links-container {
-  text-transform: capitalize;
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s ease-in-out all;
+}
+
+.show-container {
+  height: 150px;
 }
 
 .links {
+  text-transform: capitalize;
   font-size: 1rem;
   list-style: none;
   display: flex;
@@ -60,7 +68,7 @@ main {
 .links a {
   text-decoration: none;
   display: block;
-  padding-left: 1.25rem;
+  padding-left: 1.75rem;
   padding-bottom: 0.5rem;
   letter-spacing: 1px;
   color: #1e293b;
@@ -69,5 +77,5 @@ main {
 
 .links a:hover {
   background-color: #a5d5f8;
-  padding-left: 1.75rem;
+  padding-left: 2.25rem;
 }
