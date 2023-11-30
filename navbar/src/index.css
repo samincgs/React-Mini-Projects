@@ -24,8 +24,50 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  margin: 0rem 0.5rem;
+  transition: 0.3s ease-in-out all;
 }
 
 .nav-header img {
-  margin-top: -10px;
+  margin-top: -15px;
+}
+
+.btn-link {
+  cursor: pointer;
+  border: transparent;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: rgb(21, 148, 190);
+  transition: 0.3s ease-in-out all;
+}
+
+.btn-link:hover {
+  transform: rotate(90deg);
+  color: rgb(23, 168, 216);
+}
+
+.links-container {
+  text-transform: capitalize;
+}
+
+.links {
+  font-size: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.links a {
+  text-decoration: none;
+  display: block;
+  padding-left: 1.25rem;
+  padding-bottom: 0.5rem;
+  letter-spacing: 1px;
+  color: #1e293b;
+  transition: 0.3s ease-in-out all;
+}
+
+.links a:hover {
+  background-color: #a5d5f8;
+  padding-left: 1.75rem;
 }
