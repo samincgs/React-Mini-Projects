@@ -5,7 +5,7 @@ import {
   FaInstagramSquare,
 } from 'react-icons/fa';
 
-export const pageLinks = [
+export const links = [
   {
     id: 1,
     url: '/',
@@ -33,25 +33,25 @@ export const pageLinks = [
   },
 ];
 
-export const socialLinks = [
+export const social = [
   {
     id: 1,
     url: 'https://www.facebook.com',
-    icon: FaFacebookSquare,
+    icon: <FaFacebookSquare />,
   },
   {
     id: 2,
     url: 'https://www.twitter.com',
-    icon: FaTwitterSquare,
+    icon: <FaTwitterSquare />,
   },
   {
     id: 3,
     url: 'https://www.linkedin.com',
-    icon: FaLinkedin,
+    icon: <FaLinkedin />,
   },
   {
     id: 4,
     url: 'https://www.instagram.com',
-    icon: FaInstagramSquare,
+    icon: <FaInstagramSquare />,
   },
 ];

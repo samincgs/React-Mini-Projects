@@ -14,68 +14,111 @@ main {
   min-height: 100vh;
 }
 
-.nav-center {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+nav {
   background-color: #fff;
-  transition: 0.3s ease-in-out all;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 .nav-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem;
-  margin: 0rem 0.5rem;
-  transition: 0.3s ease-in-out all;
 }
 
-.nav-header img {
-  margin-top: -15px;
+.logo {
+  height: 40px;
 }
 
-.btn-link {
-  cursor: pointer;
-  border: transparent;
-  background-color: transparent;
+.nav-toggle {
   font-size: 1.5rem;
-  color: rgb(21, 148, 190);
+  color: #49a6e9;
+  background: transparent;
+  border-color: transparent;
   transition: 0.3s ease-in-out all;
+  cursor: pointer;
 }
 
-.btn-link:hover {
+.nav-toggle:hover {
+  color: #104e7a;
   transform: rotate(90deg);
-  color: rgb(23, 168, 216);
-}
-
-.links-container {
-  height: 0;
-  overflow: hidden;
-  transition: 0.3s ease-in-out all;
-}
-
-.show-container {
-  height: 150px;
-}
-
-.links {
-  text-transform: capitalize;
-  font-size: 1rem;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
 }
 
 .links a {
-  text-decoration: none;
-  display: block;
-  padding-left: 1.75rem;
-  padding-bottom: 0.5rem;
+  color: #334155;
+  font-size: 1rem;
+  text-transform: capitalize;
   letter-spacing: 1px;
-  color: #1e293b;
+  display: block;
+  padding: 0.5rem 1rem;
   transition: 0.3s ease-in-out all;
 }
 
 .links a:hover {
-  background-color: #a5d5f8;
-  padding-left: 2.25rem;
+  background-color: #c5e5fc;
+  color: #49a6e9;
+  padding-left: 1.5rem;
+}
+
+/* 160px or 10rem */
+.links-container {
+  overflow: hidden;
+  transition: 0.3s ease-in-out all;
+}
+
+.social-container {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle {
+    display: none;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-center {
+    max-width: 1570px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .links-container {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+    gap: 1rem;
+  }
+  .links a {
+    padding: 0;
+  }
+  .links a:hover {
+    background-color: transparent;
+    padding: 0;
+  }
+  .social-icons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .social-container {
+    display: flex;
+  }
+  .social-icons a {
+    color: #49a6e9;
+    transition: 0.3s ease-in-out all;
+  }
+  .social-icons a:hover {
+    color: #8bcbf9;
+  }
 }
